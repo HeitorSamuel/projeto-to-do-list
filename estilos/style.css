@@ -10,6 +10,10 @@
     font-weight: bold;
 }
 
+body{
+    background-color: lightslategray;
+}
+
 main{
     height: 100vh;
     width: 100vw;
@@ -38,7 +42,7 @@ div.titulo{
 }
 
 div.titulo > h1{
-    font-size: 4.2rem;
+    font-size: 4rem;
     font-family: "Bebas Neue", sans-serif;
 }
 
@@ -55,6 +59,10 @@ div.input-button > input{
 
 div.input-button > input#txtinput{
     flex: 4;
+}
+
+div.input-button > input#txtinput:focus{
+    outline: none;
 }
 
 div.input-button > input#botao-add{
@@ -74,11 +82,11 @@ div.tasks{
     padding: 5px;
 }
 
-div.tasks > div#texto{
+div.tasks > div.texto-task{
     padding-left: 10px;
 }
 
-div.tasks > input#botao-del{
+div.tasks > input.botao-del{
     padding: 10px;
     width: 50px;
     cursor: pointer;
