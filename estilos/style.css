@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
 main{
@@ -11,6 +17,7 @@ main{
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    border: 1px dashed blue;
 }
 
 section.tela-task{
@@ -21,16 +28,55 @@ section.tela-task{
     padding: 20px;
     gap: 20px;
     width: 550px;
+    border: 1px dashed red;
+    margin-top: 50px;
 }
 
-div.titulo {
-    font-size: 1.5rem;
-    margin-top: 10px;
+div.titulo > h1{
+    font-size: 3.8rem;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 div.input-button{
-    padding: 20px;
-    gap: 20px;
+    display: flex;
+    gap: 10px;
+    
 }
+
+div.input-button > input{
+    padding: 8px;
+    font-size: 1rem;
+}
+
+div.input-button > input#txtinput{
+    width: 360px;
+}
+
+div.input-button > input#botao-add{
+    width: 90px;
+    cursor: pointer;
+}
+
+div.tasks{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 508px;
+    font-size: 1.3rem;
+    background-color: bisque;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+div.tasks > input#botao-del{
+    padding: 10px;
+    width: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+}
+
 
 
