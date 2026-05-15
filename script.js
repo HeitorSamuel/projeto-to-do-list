@@ -14,6 +14,9 @@ function adicionar(){
         
         var botaodel = document.createElement('button')
         botaodel.setAttribute('class', 'botao-del')
+
+        botaodel.setAttribute('onclick', 'excluir(this)')
+
         var icone = document.createElement('i')
         icone.setAttribute('class', 'fa-solid fa-xmark')
 
@@ -32,7 +35,6 @@ function adicionar(){
     }
 }
 
-function excluir(){
-    var task = document.querySelector('.tasks')
-    task.remove('.task')
+function excluir(button){
+    button.parentElement.remove()
 }

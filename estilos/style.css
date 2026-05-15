@@ -8,11 +8,20 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    font-weight: bold;
+    
+}
+
+:root{
+    --texto-principal: #031926;
+    --fundo-principal: #9DBEBB;
+    --cor-botao: #468189;
+    --cor-caixa: #77ACA2;
+    --cor-texto-fonte: #F4E9CD; 
+
 }
 
 body{
-    background-color: lightslategray;
+    background-color: var(--fundo-principal);
 }
 
 main{
@@ -45,6 +54,7 @@ div.titulo{
 div.titulo > h1{
     font-size: 4rem;
     font-family: "Bebas Neue", sans-serif;
+    color: var(--texto-principal);
 }
 
 div.input-button{
@@ -60,6 +70,15 @@ div.input-button > input{
 
 div.input-button > input#txtinput{
     flex: 4;
+    background-color: var(--cor-caixa);
+    color: var(--cor-texto-fonte);
+    border: 2px solid var(--texto-principal);
+    border-radius: 8px;
+    
+}
+
+div.input-button > input#txtinput::placeholder{
+    color: var(--cor-texto-fonte);
 }
 
 div.input-button > input#txtinput:focus{
@@ -69,6 +88,17 @@ div.input-button > input#txtinput:focus{
 div.input-button > input#botao-add{
     flex: 1;
     cursor: pointer;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-fonte);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+div.input-button > input#botao-add:hover{
+    background-color: var(--cor-caixa);
+    color: var(--texto-principal);
 }
 
 div.tasks{
@@ -78,13 +108,14 @@ div.tasks{
     align-items: center;
     width: 100%;
     font-size: 1.3rem;
-    background-color: bisque;
+    background-color: var(--cor-caixa);
     border-radius: 8px;
     padding: 5px;
 }
 
 div.tasks > div.texto-task{
     padding-left: 10px;
+    color: var(--cor-texto-fonte);
 }
 
 div.tasks > button.botao-del{
@@ -94,9 +125,13 @@ div.tasks > button.botao-del{
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
-    color: rgb(170, 0, 0);
+    color: #590d22;
+    transition: color 0.5s;
 }
 
+div.tasks > button.botao-del:hover{
+    color: #c9184a;
+}
 
 
 
