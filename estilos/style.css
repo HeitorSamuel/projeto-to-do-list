@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 *{
     margin: 0px;
     padding: 0px;
@@ -86,13 +87,14 @@ div.tasks > div.texto-task{
     padding-left: 10px;
 }
 
-div.tasks > input.botao-del{
+div.tasks > button.botao-del{
     padding: 10px;
     width: 50px;
     cursor: pointer;
     background-color: transparent;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    color: rgb(170, 0, 0);
 }
 
 
