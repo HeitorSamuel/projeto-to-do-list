@@ -12,11 +12,33 @@
 }
 
 :root{
-    --texto-principal: #031926;
+    
+    /* Fundo geral da página */
     --fundo-principal: #9DBEBB;
-    --cor-botao: #468189;
+
+    /* Caixa principal / cards */
     --cor-caixa: #77ACA2;
-    --cor-texto-fonte: #F4E9CD; 
+
+    /* Botões principais */
+    --cor-botao: #468189;
+    --cor-botao-hover: #5B9AA3;
+    --cor-texto-botao-hover: #D6E7E5;
+
+    /* Texto */
+    --texto-principal: #031926;
+    --texto-secundario: #244B5A;
+    --cor-texto-fonte: #F4E9CD;
+
+    /* Input */
+    --cor-input: #B8D3D1;
+
+    /* Botão excluir */
+    --cor-delete: #9B2226;
+    --cor-delete-hover: #BB3E03;
+
+    /* Bordas e sombras */
+    --cor-borda: rgba(3, 25, 38, 0.2);
+    --sombra-caixa: rgba(0, 0, 0, 0.25);
 
 }
 
@@ -25,13 +47,12 @@ body{
 }
 
 main{
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    border: 1px dashed blue;
 }
 
 section.tela-task{
@@ -42,8 +63,15 @@ section.tela-task{
     padding: 20px;
     gap: 20px;
     width: 650px;
-    border: 1px dashed red;
     margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 15px var(--sombra-caixa);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+section.tela-task:hover{
+    transform: scale(1.01);
 }
 
 div.titulo{
@@ -64,21 +92,21 @@ div.input-button{
 }
 
 div.input-button > input{
-    padding: 12px;
+    padding: 14px;
     font-size: 1rem;
 }
 
 div.input-button > input#txtinput{
     flex: 4;
-    background-color: var(--cor-caixa);
-    color: var(--cor-texto-fonte);
-    border: 2px solid var(--texto-principal);
+    background-color: var(--cor-input);
+    color: var(--texto-secundario);
+    border: 2px solid var(--cor-borda);
     border-radius: 8px;
     
 }
 
 div.input-button > input#txtinput::placeholder{
-    color: var(--cor-texto-fonte);
+    color: var(--texto-secundario);
 }
 
 div.input-button > input#txtinput:focus{
@@ -97,9 +125,10 @@ div.input-button > input#botao-add{
 }
 
 div.input-button > input#botao-add:hover{
-    background-color: var(--cor-caixa);
-    color: var(--texto-principal);
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-botao-hover);
 }
+
 
 div.tasks{
     display: flex;
@@ -111,12 +140,14 @@ div.tasks{
     background-color: var(--cor-caixa);
     border-radius: 8px;
     padding: 5px;
+    box-shadow: 0px 0px 10px var(--sombra-caixa);
 }
 
 div.tasks > div.texto-task{
     padding-left: 10px;
-    color: var(--cor-texto-fonte);
+    color: var(--texto-principal);
 }
+
 
 div.tasks > button.botao-del{
     padding: 10px;
@@ -125,13 +156,19 @@ div.tasks > button.botao-del{
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
-    color: #590d22;
+    color: var(--cor-delete);
     transition: color 0.5s;
 }
 
 div.tasks > button.botao-del:hover{
-    color: #c9184a;
+    color: var(--cor-delete-hover);
 }
 
+@media screen and (max-width: 650px) {
+    section.tela-task{
+        margin: 50px;
+        
+    }
+}
 
 
