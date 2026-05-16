@@ -11,23 +11,37 @@ function adicionar(){
         var txttask = document.createElement('div')
         txttask.setAttribute('class', 'texto-task')
         txttask.textContent = (txtinput.value)
+
+        var divbotoes = document.createElement('div')
+        divbotoes.setAttribute('class', 'botoes-task')
         
         var botaodel = document.createElement('button')
         botaodel.setAttribute('class', 'botao-del')
-
         botaodel.setAttribute('onclick', 'excluir(this)')
 
-        var icone = document.createElement('i')
-        icone.setAttribute('class', 'fa-solid fa-xmark')
+        var iconedel = document.createElement('i')
+        iconedel.setAttribute('class', 'fa-solid fa-xmark')
+
+        var botaoedit = document.createElement('button')
+        botaoedit.setAttribute('class', 'botao-edit')
+
+        var iconeedit = document.createElement('i')
+        iconeedit.setAttribute('class', 'fa-solid fa-pen-to-square')
 
 
         telatasks.appendChild(tasks)
         
         tasks.appendChild(txttask)
         
-        tasks.appendChild(botaodel)
+        tasks.appendChild(divbotoes)
+        
+        divbotoes.appendChild(botaodel)
 
-        botaodel.appendChild(icone)
+        divbotoes.appendChild(botaoedit)
+
+        botaodel.appendChild(iconedel)
+
+        botaoedit.appendChild(iconeedit)
 
         txtinput.value = ''
         

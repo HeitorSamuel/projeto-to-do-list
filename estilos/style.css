@@ -143,13 +143,36 @@ div.tasks{
     box-shadow: 0px 0px 10px var(--sombra-caixa);
 }
 
+div.tasks > div.botoes-task{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.botoes-task > button.botao-edit{
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-fonte);
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+    border: 1px solid var(--cor-borda);
+}
+
+div.botoes-task > button.botao-edit:hover{
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-botao-hover);
+}
+
 div.tasks > div.texto-task{
     padding-left: 10px;
     color: var(--texto-principal);
 }
 
 
-div.tasks > button.botao-del{
+div.botoes-task > button.botao-del{
     padding: 10px;
     width: 50px;
     cursor: pointer;
@@ -160,7 +183,7 @@ div.tasks > button.botao-del{
     transition: color 0.5s;
 }
 
-div.tasks > button.botao-del:hover{
+div.botoes-task > button.botao-del:hover{
     color: var(--cor-delete-hover);
 }
 
