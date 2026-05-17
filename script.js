@@ -24,6 +24,7 @@ function adicionar(){
 
         var botaoedit = document.createElement('button')
         botaoedit.setAttribute('class', 'botao-edit')
+        botaoedit.setAttribute('onclick', 'editar(this)')
 
         var iconeedit = document.createElement('i')
         iconeedit.setAttribute('class', 'fa-solid fa-pen-to-square')
@@ -50,5 +51,25 @@ function adicionar(){
 }
 
 function excluir(button){
-    button.parentElement.remove()
+    button.parentElement.parentElement.remove()
 }
+
+function editar(button){
+    var textobotao = button.parentElement.parentElement //.task
+    var valtxtobotao = textobotao.querySelector('.texto-task')
+    var valtxtobotaoAtual = valtxtobotao.textContent
+    if (valtxtobotao.querySelector('input')){
+        return 
+    }else{
+    var inputeditar = document.createElement('input')
+    inputeditar.setAttribute('type', 'text')
+    inputeditar.setAttribute('class', 'input-editar')
+    inputeditar.value = valtxtobotaoAtual
+    valtxtobotao.textContent = ''
+    valtxtobotao.appendChild(inputeditar)
+    inputeditar.focus()
+    }
+    
+}
+    
+    
